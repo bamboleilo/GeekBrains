@@ -1,2 +1,5 @@
 #! /bin/bash
-
+# Программа выводит тип элемента списка
+l = [1, 'hello', 'World', 2, 12, 'abc', None, [1, 2]]
+for i in l:
+    print(type(i))
