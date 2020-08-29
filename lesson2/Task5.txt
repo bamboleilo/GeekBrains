@@ -1,0 +1,11 @@
+# Программа
+num = int(input())
+l = [7, 5, 3, 3, 2]
+if num in l:
+    r = l.index(num) # узнаем индекс первого совпадения числа num
+    l.insert(r, num) # добавляем число num в индекс первого совпадения  
+    print(l)
+else:
+    l.append(num) # добавляем новое число в список
+    l.sort(reverse=True) # делаем сортировку в обратном порядке
+    print(l)
