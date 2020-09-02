@@ -1,1 +1,116 @@
+# Task1 
+
+def func_div(a, b):
+    '''
+     Функция принимает два числа и выполняет их деление.
+    :param a: делимое
+    :param b: делитель
+    :return: частное
+    '''
+
+    try:
+        print(a / b)
+    except ZeroDivisionError:
+        print('Деление на ноль!')
+
+
+func_div(int(input("Введите первое число: ")), int(input("Введите второе число: ")))
+
+##############################################################
+# Task2
+
+def func_div(name, surname, year, city, email, phone):
+    '''Функция выводит данные пользователя'''
+    
+    print(f'Имя: {name} ### Фамилия: {surname} ### Год рождения: {year} ### Город проживания: {city} ### email: {email} ### сот.: {phone}')
+
+func_div(phone=89997777777, city='Сызрань', name='Теодор', surname='Рузвельт', year=1946, email='teodor@mail.ru')
+
+##############################################################
+# Task3
+
+def my_func(num1, num2, num3):
+    '''Функция возвращает сумму наибольших двух аргументов.'''
+    l = [num1, num2, num3]
+    l.remove(min(l))
+    print(sum(l))
+
+my_func(77, 3, 7)
+
+##############################################################
+# Task4.1
+
+def my_func(x, y):
+    '''
+    Функция выполняет возведение числа x в степень y
+    :param x: действительное положительное число
+    :param y: целое отрицательное число
+    :return: x ** y
+    '''
+    if x > 0 and int(y) == float(y) and y < 0:
+        print(x ** y)
+    else:
+        print('Введите корректные параметры')
+my_func(2.2, -3)
+
+##############################################################
+# Task4.2
+
+def my_func(x, y):
+    '''
+    Функция выполняет возведение числа x в степень y
+    :param x: действительное положительное число
+    :param y: целое отрицательное число
+    :return: x ** y
+    '''
+    r = 1
+    if x > 0 and int(y) == float(y) and y < 0:
+        for i in range(abs(y)):
+            r /= x
+        print(r)
+    else:
+        print('Введите корректные параметры')
+
+my_func(2.2, -3)
+
+##############################################################
+# Task5
+
+def my_func():
+    '''Функция выводит сумму чисел'''
+    while True:
+        s = input('Введите ряд чисел, для выхода из программы введите q ')
+        if s == 'q':
+            print('Программа завершена')
+            break
+        elif 'q' in s:
+            list_nums = s[:s.index('q')].split()
+            for i in range(len(list_nums)):
+                list_nums[i] = int(list_nums[i])
+            print(sum(list_nums))
+            print('Программа завершена')
+            break
+        else:
+            list_nums = s.split()
+            for i in range(len(list_nums)):
+                list_nums[i] = int(list_nums[i])
+            print(sum(list_nums))
+
+my_func()
+
+##############################################################
+# Task6
+
+def int_func(word):
+    '''Функция возвращает введенное слово с прописной первой буквой'''
+    global result
+    result = word.capitalize()
+
+my_list = input('Введите слова через пробел: ').split()
+list_result = []
+for i in my_list:
+    int_func(i)
+    list_result.append(result)
+print(' '.join(list_result))
+
 
