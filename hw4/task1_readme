@@ -1,0 +1,3 @@
+# Для запуска скрипта импортируйте фунцию из файла task1_file, как указано ниже
+from task1_file import salary
+salary()
