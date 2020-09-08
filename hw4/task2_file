@@ -1,0 +1,6 @@
+from random import randrange
+
+
+def num_generator():
+    generator = sorted(set([randrange(1000) for _ in range(10)]))
+    print(generator)
