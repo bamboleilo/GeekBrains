@@ -1,0 +1,14 @@
+from itertools import count, cycle
+def my_func():
+    l = []
+    for el in count(3):
+        if el > 10:
+            break
+        else:
+            l.append(el)
+    print(l)
+    l1 = []
+    iter = cycle(l)
+    for _ in range(len(l * 2)):
+        l1.append(next(iter))
+    print(sorted(l1))
