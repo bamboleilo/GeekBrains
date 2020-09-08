@@ -1,0 +1,12 @@
+from random import randrange
+
+
+def num_generator():
+    generator = [randrange(1, 40) for _ in range(20)]
+    result = []
+    print(generator)
+    for i in generator:
+        if generator.count(i) == 1:
+            result.append(i)
+
+    print(result)
