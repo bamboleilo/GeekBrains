@@ -1,0 +1,2 @@
+from task6_file import my_func
+my_func()
