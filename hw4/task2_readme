@@ -1,0 +1,2 @@
+from task2_file import num_generator
+num_generator()
