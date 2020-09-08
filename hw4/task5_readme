@@ -1,0 +1,2 @@
+from task5_file import my_func, result
+result()
