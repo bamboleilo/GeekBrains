@@ -1,0 +1,3 @@
+def salary():
+    hours, prize, money = int(input('Введите количество отработанных часов: ')), int(input('Введите премиальные: ')), int(input('Введите оплату вашей ставки за час: '))
+    print(f'Ваша зарплата составит: {hours * money + prize}')
