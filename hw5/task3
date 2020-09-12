@@ -1,0 +1,5 @@
+with open("task3_file.txt", encoding='utf-8') as write_f:
+    for line in write_f:
+        l = line.split()
+        if float(l[1]) < 20000:
+            print(line, end='')
