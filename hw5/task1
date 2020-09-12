@@ -1,0 +1,7 @@
+with open("task1.txt", "x") as write_f:
+    while True:
+        s = input('Введите строку: ')
+        if s != '':
+            write_f.write(s + '\n')
+        else:
+            break
