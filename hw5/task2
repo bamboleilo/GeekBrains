@@ -1,0 +1,7 @@
+with open("task2_file.txt") as write_f:
+    count = 0
+    for line in write_f:
+        count += 1
+        l = line.split()
+        print(f'Количество слов в {count} строке равно {len(l)}')
+    print('Общее количество строк равно:', count)
