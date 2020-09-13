@@ -1,14 +1,12 @@
 with open('task5_file', encoding='utf-8') as write_f:
-    l = []
     d = {}
-
     for line in write_f:
         line = line.replace(':', '').replace('(лаб)', '').replace('(л)', '').replace('(пр)', '')
         line = line.replace('—', '').replace('.', '').replace('\n', '')
-        l1 = line.split()
-        subject = l1.pop(0)
+        l = line.split()
+        subject = l.pop(0)
         hours = 0
-        for i in l1:
+        for i in l:
             hours += int(i)
         d[subject] = hours
     print(d)
