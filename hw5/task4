@@ -1,0 +1,11 @@
+from random import randrange
+with open("task4_file.txt", 'a') as write_f:
+    for _ in range(20):
+        num = randrange(1000)
+        write_f.write(str(num) + ' ')
+with open("task4_file.txt") as write_f:
+    l = write_f.readline().split()
+    for i in range(len(l)):
+        l[i] = int(l[i])
+
+    print('Сумма чисел равна: ', sum(l))
