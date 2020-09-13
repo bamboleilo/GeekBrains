@@ -1,0 +1,22 @@
+import json
+with open('task6_file.txt', encoding='utf-8') as write_f:
+    d = {}
+    d_middle = {'average_profit': None}
+    count_firm = 0
+    average = 0
+
+    for line in write_f:
+        line = line.replace('\n', '')
+        l = line.split()
+        firm = l.pop(0)
+        l.pop(0)
+        profit = int(l[0]) - int(l[1])
+        d[firm] = profit
+        count_firm += 1
+        average += profit
+    d_middle['average_profit'] = int(average / count_firm)
+    result = [d, d_middle]
+    print(result)
+
+with open("task6.json", "x") as write_f:
+    json.dump(result, write_f)
