@@ -1,0 +1,27 @@
+with open("task3-1_file.txt") as write_f:
+    for line in write_f:
+        l = line.split()
+        if int(l[-1]) == 1:
+            l[0] = 'Один'
+            l[1] = '-'
+            s = ' '.join(l)
+            with open("task3-1_newfile.txt", 'a', encoding='utf-8') as write_new_f:
+                write_new_f.write(s + '\n')
+        elif int(l[-1]) == 2:
+            l[0] = 'Два'
+            l[1] = '-'
+            s = ' '.join(l)
+            with open("task3-1_newfile.txt", 'a', encoding='utf-8') as write_new_f:
+                write_new_f.write(s + '\n')
+        elif int(l[-1]) == 3:
+            l[0] = 'Три'
+            l[1] = '-'
+            s = ' '.join(l)
+            with open("task3-1_newfile.txt", 'a', encoding='utf-8') as write_new_f:
+                write_new_f.write(s + '\n')
+        elif int(l[-1]) == 4:
+            l[0] = 'Четыре'
+            l[1] = '-'
+            s = ' '.join(l)
+            with open("task3-1_newfile.txt", 'a', encoding='utf-8') as write_new_f:
+                write_new_f.write(s + '\n')
